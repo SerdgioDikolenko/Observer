@@ -7,7 +7,7 @@ public class ConsoleMonitor implements IConsoleMonitor {
 
     @Override
     public void UpdateConsoleMonitor(ArrayList<String> str) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     private ArrayList<FileObj> fileList = new ArrayList<>();            // список объектов для работы с файлами
     private ArrayList<IFileObserver> observers = new ArrayList<>();     // список наблюдателей

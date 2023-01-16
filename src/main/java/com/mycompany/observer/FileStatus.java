@@ -14,6 +14,7 @@ public class FileStatus {
     long lastModif;
     boolean exist;
     String msgStatus;
+    String []statusData;
     
 // Инициализируем все параметры
     FileStatus(String pathNameFile) {
@@ -23,6 +24,14 @@ public class FileStatus {
         length    = obj.length();
         lastModif = obj.lastModified();
         exist     = obj.exists();
+        statusData = new String[5];
+        
+        statusData[0] = nameFile;
+        statusData[1] = pathFile;
+        statusData[2] = String.valueOf(exist);
+        statusData[3] = String.valueOf(new Date(lastModif));
+        statusData[3] = String.valueOf(length);       
+        
         //Date d = new Date(lastModif);
         msgStatus = "File name - " + nameFile +"\n" +
                "File exist - " +  exist +"\n" +
@@ -55,6 +64,15 @@ public class FileStatus {
         }
         
        if(infoChanged == true){
+       
+        statusData[0] = nameFile;
+        statusData[1] = pathFile;
+        statusData[2] = String.valueOf(exist);
+        statusData[3] = String.valueOf(new Date(lastModif));
+        statusData[3] = String.valueOf(length);           
+           
+           
+           
 //хард код           
         msgStatus =  "File name - " + nameFile +"\n" +
                      "File exist - " +  exist +"\n" +
@@ -70,5 +88,10 @@ public class FileStatus {
     {
     return msgStatus ;
     }
+    String[] getStatusData()
+    {
+    return statusData ;
+    }
+    
 }
 
